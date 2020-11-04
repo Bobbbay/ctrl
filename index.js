@@ -31,8 +31,9 @@ module.exports = (app) => {
     let branch = context.payload["pull_request"]["head"]["label"].split(":");
     let repo = context.payload["pull_request"]["head"]["repo"]["name"];
     let link = `https://github.com/${branch[0]}/${repo}/tree/${branch[1]}`;
+    let toClone = link.split("/tree/");
 
-    exec("ls -la", (error, stdout, stderr) => {
+    exec(`./build-sh ${toClone[0]} ${toClone[1]}`, (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
         return;
