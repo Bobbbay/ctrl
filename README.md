@@ -1,26 +1,25 @@
 # ctrl
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that The CTRL GitHub Bot.
+> A GitHub App built with [Probot](https://github.com/probot/probot) for CI, CD, testing, PR reviews, and more!
 
 ## Setup
 
-```sh
-# Install dependencies
-npm install
+1. Create a directory called `.ctrlrc`
+2. In that directory, create a file - we'll make one called `build`
+3. Fill up `build` with contents:
 
-# Run the bot
-npm start
+```
+#!/bin/bash
+
+echo "Starting build..."
+make build
+echo "Build complete!"
 ```
 
-## Docker
+4. Open a PR on your repository - now, CTRL will run your given scripts remotely. It will then comment on that PR with the build logs and an exit status.
+5. Sit back and watch as each PR gets tested before merging.
 
-```sh
-# 1. Build container
-docker build -t ctrl .
-
-# 2. Start container
-docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> ctrl
-```
+The possibilities are endless. Literally. Virtually any script that can be shebanged (`#!/bin/bash`) can be run.
 
 ## Contributing
 
