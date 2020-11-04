@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir build
+cd build
+git clone $1
+cd *
+for i in .ctrlrc/*
+do
+  echo $i
+done
+cd ..
+rm -rf *
+cd ..
