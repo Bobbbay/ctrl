@@ -30,4 +30,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
-[ISC](LICENSE) © 2020 Bobbbay Bobbayan <abatterysingle@gmail.com>
+[MIT](LICENSE) © 2020 Bobbbay Bobbayan <abatterysingle@gmail.com>
