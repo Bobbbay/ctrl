@@ -1,0 +1,17 @@
+{
+  "name": "CTRL",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Bobbbay Bobbayan",
+  "license": "MIT",
+  "repository": "https://github.com/bobbbay/ctrl.git",
+  "scripts": {
+    "start": "probot run ./index.js"
+  },
+  "dependencies": {
+    "probot": "^9.11.5"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
