@@ -1,6 +1,6 @@
 # ctrl
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) for CI, CD, testing, PR reviews, and more!
+A GitHub App built with [Probot](https://github.com/probot/probot) for CI, CD, testing, PR reviews, and more!
 
 ## Setup
 
