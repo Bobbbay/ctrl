@@ -4,7 +4,7 @@
   "private": true,
   "description": "The CTRL GitHub Bot.",
   "author": "Bobbbay Bobbayan <abatterysingle@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "repository": "https://github.com/Bobbbay/ctrl.git",
   "homepage": "https://github.com/Bobbbay/ctrl",
   "bugs": "https://github.com/Bobbbay/ctrl/issues",
