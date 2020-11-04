@@ -3,28 +3,9 @@
  * @param {import('probot').Application} app
  */
 module.exports = (app) => {
-  /*
-  module.exports = (app) => {
-    app.on("*", async (context) => {
-      context.log.info({
-        event: context.event,
-        action: context.payload.action,
-      });
-    });
-  };
-  */
-  // Your code here
-  app.log.info("Yay, the app was loaded!");
+  app.log.info("App was loaded!");
 
   const { spawn } = require("child_process");
-
-  app.on("issues.opened", async (context) => {
-    app.log.info(context);
-    const issueComment = context.issue({
-      body: `Thanks for opening this issue! Here's some context: ${context}`,
-    });
-    return context.github.issues.createComment(issueComment);
-  });
 
   app.on("pull_request.opened", async (context) => {
     app.log.info(context);
@@ -75,31 +56,5 @@ ${logs}
         return context.github.issues.createComment(issueComment);
       }
     });
-
-    /*
-
-    exec(`./build-sh ${toClone[0]} ${toClone[1]}`, (error, stdout, stderr) => {
-      if (error) {
-        const issueComment = context.issue({
-          body: `Thank you for submitting your PR. Sadly, it seems like the build has failed a check. Here are the error codes for details: ${error.message}.`,
-        });
-        console.log(`error: ${error.message}`);
-        return context.github.issues.createComment(issueComment);
-      }
-      if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-      const issueComment = context.issue({
-        body: `Thank you for submitting your PR. It seems like this PR passes all checks.`,
-      });
-      return context.github.issues.createComment(issueComment);
-    });*/
   });
-  // For more information on building apps:
-  // https://probot.github.io/docs/
-
-  // To get your app running against GitHub, see:
-  // https://probot.github.io/docs/development/
 };
